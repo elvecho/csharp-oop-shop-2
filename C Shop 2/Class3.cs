@@ -32,13 +32,14 @@ namespace C_Shop_2
 //Metodi
 public void AggiungiFrutta(int quantitàdifruttaDaAggiungere)
         {
-            if(quantità + quantitàdifruttaDaAggiungere > 5)
+            if(quantità + quantitàdifruttaDaAggiungere > 5 )
             {
                 Console.WriteLine("il massimo è 5 pezzi stai aggiungendo troppo");
             }
             else
             {
                quantità =  quantità + quantitàdifruttaDaAggiungere;
+                Console.WriteLine("hai aggiunto frutta");
                 Console.WriteLine("la quantità di frutta ora è: " + quantità);
 
             }
@@ -46,7 +47,17 @@ public void AggiungiFrutta(int quantitàdifruttaDaAggiungere)
         }
         public void togliFrutta(int quantitàDiFruttaDaTogliere)
         {
-
+            if(quantità - quantitàDiFruttaDaTogliere < 0)
+            {
+                Console.WriteLine("non hai nulla da togliere");
+            }
+            else
+            {
+               quantità =  quantità - quantitàDiFruttaDaTogliere;
+                Console.WriteLine("hai tolto frutta");
+                Console.WriteLine("la quantità di frutta ora è: " + quantità);
+            }
         }
+      
     }
 }
